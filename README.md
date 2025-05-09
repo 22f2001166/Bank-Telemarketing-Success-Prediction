@@ -6,27 +6,27 @@ This project builds a machine learning pipeline to predict the success of bank t
 
 The data is sourced from the Kaggle Competition and consists of:
 
-train.csv: contains features and target labels
+- train.csv: contains features and target labels
 
-test.csv: contains features for prediction
+- test.csv: contains features for prediction
 
 ### Features and Engineering
 
 The script performs the following feature engineering tasks:
 
-Interaction features: age_campaign, balance_duration
+- Interaction features: age_campaign, balance_duration
 
-Categorical combinations: job_education
+- Categorical combinations: job_education
 
-Binning: Converts continuous variables like age and balance into groups like age_group, balance_group
+- Binning: Converts continuous variables like age and balance into groups like age_group, balance_group
 
 ### Preprocessing
 
 Data preprocessing is handled using ColumnTransformer with:
 
-StandardScaler for numeric features
+- StandardScaler for numeric features
 
-OneHotEncoder for categorical features
+- OneHotEncoder for categorical features
 
 ### Resampling Techniques
 
@@ -40,13 +40,13 @@ To combat class imbalance, the following are implemented:
 
 The project utilizes multiple models in an ensemble stacking strategy:
 
-Random Forest
+- Random Forest
 
-Gradient Boosting
+- Gradient Boosting
 
-SVM
+- SVM
 
-Logistic Regression (as meta-classifier)
+- Logistic Regression (as meta-classifier)
 
 Hyperparameter tuning uses RandomizedSearchCV over a defined parameter grid with StratifiedKFold cross-validation.
 
@@ -54,12 +54,12 @@ Hyperparameter tuning uses RandomizedSearchCV over a defined parameter grid with
 
 Models are evaluated using:
 
-F1 Score
+- F1 Score
 
-ROC AUC Score
+- ROC AUC Score
 
-Confusion Matrix
+- Confusion Matrix
 
-Classification Report
+- Classification Report
 
 
